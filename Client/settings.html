@@ -16,18 +16,13 @@
 
     <!-- Custom CSS -->
     <link href="css/freelancer.css" rel="stylesheet">
-    <link href="css/profile.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!--jTinder CSS-->
-    <link rel="stylesheet" type="text/css" href="css/match.css">
-
     <!--<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">-->
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
+    
     <!--Tab Icon-->
     <link rel="icon" href="img/favicon.png">
 
@@ -53,7 +48,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Cinder</a>
+                <a class="navbar-brand" href="#page-top">Cinder</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -71,6 +66,9 @@
                     <li class="page-scroll" id="nav-profile">
                         <a href="/profile">Profile</a>
                     </li>
+                    <!--<li class="page-scroll">
+                        <a href="#about">About</a>
+                    </li>-->
                     <li class="page-scroll" id="nav-signup">
                         <a href="/index.html#signup">Signup</a>
                     </li>
@@ -90,84 +88,72 @@
         <!-- /.container-fluid -->
     </nav>
 
-    <header>
+    <!-- Header -->
+    <!--<header>
         <div class="container">
-        <h1 style="display: block;">It's a Match</h1>
-        <hr>
-                <!-- start padding container -->
-        <div class="wrap">
-            <span>
-                <i class="fa fa-refresh fa-spin fa-3x fa-fw margin-bottom"></i>
-                <br>
-                <br>
-                <br>
-                <p>Matching...</p>
-            </span>
-            <!-- start jtinder container -->
-            <div class="hidden" id="tinderslide">
-                <ul data-bind="foreach: users">
-
-                    <li class="pane">
-                        <div class="span3 well">
-                            <div class="tile">
-                                <img src="../img/portfolio/formal guy.png"
-                                        name="aboutme" width="235" height="235" class="img-thumbnail">
-                                <h3 data-bind="text: first + ' ' + last"></h3>
-                            </div>
-
-                            <div class="chat-button">
-                                <a href="#aboutModal" data-toggle="modal" data-bind="attr: { 'data-target': '#' + username }"><button class="btn btn-default" data-dismiss="modal">Hack me out!</button></a>
-                            </div>
-                        </div>
-                    </li>
-
-                </ul>
-            </div>
-            <!-- end jtinder container -->
-
-            <!-- Modal -->
-            <div class="row main" id="userTiles" data-bind="foreach: users">
-                <div class="modal fade" data-bind="attr: { 'id': username }" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                                <h4 data-bind="text: username" class="modal-title" id="myModalLabel"></h4>
-                            </div>
-                            <div class="modal-body">
-
-                                    <img src="../img/portfolio/formal guy.png" name="aboutme"
-                                        width="140" height="140" border="0" class="img-circle"></a>
-                                    <h3 data-bind="text: first + ' ' + last" class="media-heading"></h3>
-                                    <span><strong>Languages </strong></span>
-                                    <span data-bind="text: language" class="label label-warning"></span>
-
-                                <hr>
-                                    <strong>Variable based on personality: </strong><br>
-                                    <p data-bind="text: variable" class="text-center"></p>
-                                    <br>
-                                    <strong>Favorite computer scientist: </strong><br>
-                                    <p data-bind="text: scientist" class="text-center"></p>
-
-                            </div>
-                            <div class="modal-footer">
-                            <div class="modal-exit-button">
-                                <button data-bind="text: 'I\'ve heard enough about ' + first" type="button" class="btn btn-default" data-dismiss="modal"></button>
-                            </div>
-
-                            </div>
-                        </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="img/profile.png" alt="">
+                    <div class="intro-text">
+                        <span class="name">Cinder</span>
+                        <hr class="star-light">
+                        <span class="skills">Connect - Code - Github and Chill</span>
                     </div>
                 </div>
             </div>
-            <!-- END MODAL -->
+        </div>
+    </header>-->
 
-            <!-- jTinder status text  -->
-            <div id="status"></div>
+    <!-- Settings Section -->
+    <section id="settings">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <br>
+                    <br>
+                    <h2>Update Your Profile</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <form name="update" id="updateForm">
+                        <div class="survey-questions">
+                            <p>What's your favorite programming language?</p>
+                                <select type="text" id="language" form="updateForm">
+                                    <option value="cplus">c++</option>
+                                    <option value="java">java</option>
+                                    <option value="javascript">javascript</option>
+                                    <option value="python">python</option>
+                                </select>
+                            <p>Who's your favorite computer scientist?</p>
+                                <select id="scientist" form="updateForm">
+                                  <option value="grace">Grace Hopper</option>
+                                  <option value="alan">Alan Turing</option>
+                                  <option value="ada">Ada Lovelace</option>
+                                  <option value="dijkstra">Edgar Dijkstra</option>
+                                </select>
+                            <p>What type of variable best describes your personality?</p>
+                                <select id="variable" form="updateForm">
+                                  <option value="global">Global = open and friendly with everyone!</option>
+                                  <option value="static">Static = level headed and unwavering</option>
+                                  <option value="dynamic">Dynamic = never knowing what's expected until it happens</option>
+                                  <option value="local">Local = keeps to themselves and a big homebody</option>
+                                  <option value="counter">Counter = just taking it one day at a time</option>
+                                </select>
+                        </div>
+                        <br>
+                        <div id="success-signup"></div>
+                        <div class="row">
+                            <div class="form-group col-xs-12">
+                                <button type="submit" class="btn btn-success btn-lg">Update Profile</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-    <!-- end padding container -->
-        </div>
-    </header>
+    </section>
 
     <!-- Footer -->
     <footer class="text-center">
@@ -223,9 +209,6 @@
         </a>
     </div>
 
-    <!--underscore.js-->
-    <script type="text/javascript" src="js/underscore-min.js"></script>
-
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
@@ -237,7 +220,6 @@
     <script src="js/classie.js"></script>
     <script src="js/cbpAnimatedHeader.js"></script>
 
-
     <!-- Contact Form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
@@ -247,21 +229,6 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/freelancer.js"></script>
-
-    <!--Knockout lib-->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
-
-    <!-- match.html script -->
-    <script type="text/javascript" src="js/match.js"></script>
-
-    <!-- transform2d lib -->
-    <script type="text/javascript" src="js/jquery.transform2d.js"></script>
-    <!-- jTinder lib -->
-    <script type="text/javascript" src="js/jquery.jTinder.js"></script>
-
-
-    <!--Profile CSS-->
-    <!--<link rel="stylesheet" type="text/css" href="css/profile.css">-->
 
 </body>
 

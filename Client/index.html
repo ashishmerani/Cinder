@@ -22,6 +22,10 @@
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!--<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">-->
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    
+    <!--Tab Icon-->
+    <link rel="icon" href="img/favicon.png">
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -54,27 +58,29 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                    <li class="page-scroll">
-                        <a href="match.html">Let Us Chill</a>
+                    <li class="page-scroll" id="nav-match">
+                        <a href="/match">Let Us Chill</a>
                     </li>
                     <!--<li class="page-scroll">
                         <a href="#portfolio">Portfolio</a>
                     </li>-->
-                    <li class="page-scroll">
-                        <a href="profile.html">Profile</a>
+                    <li class="page-scroll" id="nav-profile">
+                        <a href="/profile">Profile</a>
                     </li>
-                    <li class="page-scroll">
+                    <!--<li class="page-scroll">
                         <a href="#about">About</a>
-                    </li>
+                    </li>-->
                     <li class="page-scroll" id="nav-signup">
                         <a href="#signup">Signup</a>
-                    </li>
                     </li>
                     <li class="page-scroll" id="nav-login">
                         <a href="#login">Login</a>
                     </li>
-                    <li class="page-scroll">
-                        <a id="nav-logout" href="/logout">Logout</a>
+                    <li class="page-scroll" id="nav-logout">
+                        <a href="/logout">Logout</a>
+                    </li>
+                    <li id="nav-settings">
+                        <a href="/settings"><i class="fa fa-user fa-1x"></i>&nbsp;<span id="nav-userid"></span></a>
                     </li>
                 </ul>
             </div>
@@ -278,7 +284,7 @@
                                 </select>
                         </div>
                         <br>
-                        <div id="success"></div>
+                        <div id="success-signup"></div>
                         <div class="row">
                             <div class="form-group col-xs-12">
                                 <button type="submit" class="btn btn-success btn-lg">Signup</button>
@@ -317,7 +323,7 @@
                             </div>
                         </div>
                         <br>
-                        <div id="success"></div>
+                        <div id="success-login"></div>
                         <div class="row">
                             <div class="form-group col-xs-12">
                                 <button type="submit" class="btn btn-success btn-lg">Login</button>
