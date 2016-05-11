@@ -10,19 +10,21 @@
    },
     //  Replace Date() by real userId we have new file name with format: userPhoto-userId
    filename: function (req, file, callback) {
-     callback(null, file.fieldname + "-" + Date.now());
+     callback(null, file.fieldname + "-" + Date.now() + ".jpg");
    }
  });
  var upload = multer({ storage : storage}).single("userPhoto");
+
  app.use(express.static(__dirname + "/"));
- app.post("/",function(req,res){
+
+   app.post("/",function(req,res){
      upload(req,res,function(err) {
          if(err) {
            console.log("Error uploading file.");
              return res.end();
          }
          console.log("File is uploaded");
-         res.end();
+         res.end(      );
      });
  });
 
