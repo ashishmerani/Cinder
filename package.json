@@ -12,10 +12,6 @@
     "multer": "^1.1.0",
     "socket.io": "^1.4.6"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/bisaysavath/Cinder.git"
-  },
   "author": "B.S.",
   "license": "ISC",
   "bugs": {
