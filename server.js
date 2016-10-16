@@ -17,7 +17,7 @@ var express = require("express"),
 
 // If Cloud Foundry service is available
 if (process.env.VCAP_SERVICES) {
-    mongoURL = JSON.parse(process.env.VCAP_SERVICES).mlab.credentials.uri;
+    mongoURL = JSON.parse(process.env.VCAP_SERVICES).mlab[0].credentials.uri;
 }
 
 // connect to mongoDB
