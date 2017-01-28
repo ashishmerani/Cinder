@@ -1,0 +1,20 @@
+<html>
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+</head>
+<body>
+  <!-- <script src="app.js"></script>
+  <input type="file" class="file" id="attachement" name="attachement" style="display: none;" onchange="fileSelected(this)">
+  <input type="button" class="file" id="btnAttachment" onclick="openAttachment()" value="Upload File"> -->
+  <form id        =  "uploadForm"
+       enctype   =  "multipart/form-data"
+       action    =  "/"
+       method    =  "post"
+  >
+  <!-- Replace "userPhoto" by real userId we have new file name : userId-Date() -->
+  <input type="file" name="userPhoto" />
+  <input type="submit" value="Upload Image" name="submit">
+  </form
+</body>
+</html>
